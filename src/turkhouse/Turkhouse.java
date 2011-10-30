@@ -36,7 +36,7 @@ public class Turkhouse extends java.awt.Robot implements Runnable {
 
     public Turkhouse() throws java.awt.AWTException {
         super();
-        setAutoDelay(250);
+        setAutoDelay(SECOND / 4);
     }
 
     @Override
@@ -47,11 +47,12 @@ public class Turkhouse extends java.awt.Robot implements Runnable {
             delay((int) (1.5 * SECOND));
             while (isCheap()) {
                 System.out.println("Looks cheap, buying.");
+                click(GOLD);       /* Click the auction. */
                 click(BUYOUT);
                 click(ACCEPT);
                 delay(1 * SECOND);
             }
-            int delay = RNG.nextInt(10 * SECOND) + 10 * SECOND;
+            int delay = RNG.nextInt(5 * SECOND) + 5 * SECOND;
             System.out.printf("Waiting %.1f seconds.\n", delay / 1000.0);
             delay(delay);
         }
