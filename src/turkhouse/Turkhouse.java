@@ -4,8 +4,11 @@ import java.awt.Color;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.InputEvent;
+import java.util.Random;
 
 public class Turkhouse extends java.awt.Robot implements Runnable {
+
+    private static final Random RNG = new Random();
 
     private static final Point SEARCH = new Point(800, 188);
     private static final Point BUYOUT = new Point(760, 560);
@@ -40,7 +43,9 @@ public class Turkhouse extends java.awt.Robot implements Runnable {
                 click(ACCEPT);
                 delay(1 * SECOND);
             }
-            delay(10 * SECOND);
+            int delay = RNG.nextInt(10 * SECOND) + 10 * SECOND;
+            System.out.println("Waiting " + (delay / 1000.0) + " seconds.");
+            delay(delay);
         }
     }
 
