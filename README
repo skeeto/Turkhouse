@@ -1,0 +1,12 @@
+This is a simple World of Warcraft neutral auction house bot. It
+watches the neutral auction house for cross-faction item
+transfers. That is, it's looking for people putting up expensive items
+for only one copper so that they can buy it on another character. This
+bot will buy anything selling for less than 1 silver.
+
+You will need to presort the items by bid, ascending, and move the
+scroll bar to the top. It's tuned to my exact screen resolution, so
+you'll have to adjust for your own screen. All you need to do is set
+all of the Point constants appropriately.
+
+Don't ask me for help.

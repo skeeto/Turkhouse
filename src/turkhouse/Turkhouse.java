@@ -11,11 +11,19 @@ public class Turkhouse extends java.awt.Robot implements Runnable {
     private static final Random RNG = new Random();
     private static final int SECOND = 1000;
 
-    /* Relevant screen positions. */
+    /** The "Search" button. */
     private static final Point SEARCH = new Point(800, 188);
+
+    /** The "Buyout" button. */
     private static final Point BUYOUT = new Point(760, 560);
+
+    /** The "Accept" button, which pops up after clicking buyout. */
     private static final Point ACCEPT = new Point(770, 220);
+
+    /** The silver coin on the top item's buyout. */
     private static final Point SILVER = new Point(810, 270);
+
+    /** The gold coin on the top item's buyout. */
     private static final Point GOLD = new Point(772, 270);
 
     public static void main(String[] args) {
