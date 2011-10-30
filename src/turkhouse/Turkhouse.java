@@ -52,7 +52,7 @@ public class Turkhouse extends java.awt.Robot implements Runnable {
                 delay(1 * SECOND);
             }
             int delay = RNG.nextInt(10 * SECOND) + 10 * SECOND;
-            System.out.println("Waiting " + (delay / 1000.0) + " seconds.");
+            System.out.printf("Waiting %.1f seconds.\n", delay / 1000.0);
             delay(delay);
         }
     }
